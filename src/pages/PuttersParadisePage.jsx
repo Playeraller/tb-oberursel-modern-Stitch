@@ -5,24 +5,43 @@ import './PuttersParadisePage.css';
 
 const PRICING = [
   {
-    title: 'Normaltarif',
-    price: '9,50 €',
-    unit: '/ Person',
-    features: ['Eine Runde über 13 Bahnen', 'Schläger & Ball inklusive', 'Keine Zeitbegrenzung'],
+    title: 'Einzelticket',
+    price: '7,00 €',
+    unit: '/ Erwachsene',
+    features: [
+      'Eine Runde über 13 Bahnen',
+      'Schläger & Ball inklusive',
+      'Kinder (bis 16 J.): 5,00 €',
+    ],
   },
   {
-    title: 'Familien-Paket',
-    price: '32,00 €',
-    unit: '/ Paket',
-    features: ['2 Erwachsene + 2 Kinder', 'Komplette Ausrüstung', 'Souvenir-Scorecard', '10% Rabatt an der Snack Bar', 'Jedes weitere Kind: +6 €'],
+    title: 'Familienkarte',
+    price: '20,00 €',
+    unit: '/ 2 Erw. + 2 Kinder',
+    features: [
+      '2 Erwachsene + 2 Kinder: 20,00 €',
+      '2 Erwachsene + 3 Kinder: 22,00 €',
+      '2 Erwachsene + 4 Kinder: 25,00 €',
+      'Komplette Ausrüstung inklusive',
+    ],
     highlighted: true,
   },
   {
-    title: 'Große Gruppen',
-    price: '7,50 €',
-    unit: '/ Person',
-    features: ['Teams ab 10 Personen', 'Reservierte Startzeiten', 'Turnierbegleitung', 'Getränkegutschein inklusive'],
+    title: 'Zehnerkarte & Extras',
+    price: '60,00 €',
+    unit: '/ 10er Erwachsene',
+    features: [
+      'Zehnerkarte Kinder: 35,00 €',
+      'Wiederholungsrunde Erw.: 5,00 €',
+      'Wiederholungsrunde Kinder: 3,50 €',
+    ],
   },
+];
+
+const OPENING_HOURS = [
+  { day: 'Montag – Freitag', time: '10:00 – 20:00 Uhr' },
+  { day: 'Samstag', time: '10:00 – 20:00 Uhr' },
+  { day: 'Sonntag', time: '10:00 – 20:00 Uhr' },
 ];
 
 export default function PuttersParadisePage() {
@@ -54,7 +73,15 @@ export default function PuttersParadisePage() {
             <div className="putters-info__card">
               <span className="material-symbols-outlined">schedule</span>
               <h3>Öffnungszeiten</h3>
-              <p>Saisonabhängig geöffnet. Letzter Einlass 1 Stunde vor Schließung – rufen Sie uns gerne an für aktuelle Zeiten.</p>
+              <div className="putters-hours">
+                {OPENING_HOURS.map((h) => (
+                  <div key={h.day} className="putters-hours__row">
+                    <span className="putters-hours__day">{h.day}</span>
+                    <span className="putters-hours__time">{h.time}</span>
+                  </div>
+                ))}
+                <div className="putters-hours__note">Letzter Einlass um 19:00 Uhr</div>
+              </div>
             </div>
             <div className="putters-info__card">
               <span className="material-symbols-outlined">celebration</span>
@@ -69,7 +96,7 @@ export default function PuttersParadisePage() {
       <section className="section section--alt putters-pricing" id="pricing">
         <div className="container">
           <div className="putters-pricing__header">
-            <span className="label">Preise</span>
+            <span className="label">Eintrittspreise</span>
             <h2>Wählen Sie Ihre Runde</h2>
           </div>
           <div className="putters-pricing__grid">

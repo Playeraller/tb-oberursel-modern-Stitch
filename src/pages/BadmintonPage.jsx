@@ -5,7 +5,7 @@ import './BadmintonPage.css';
 
 const STATS = [
   { number: '04', label: 'Badmintoncourts', icon: 'grid_view' },
-  { number: '10m+', label: 'Deckenhöhe', icon: 'height' },
+  { number: 'LED', label: 'Helles Licht', icon: 'lightbulb' },
   { number: 'PVC', label: 'Schwingboden', icon: 'layers' },
 ];
 
@@ -37,7 +37,7 @@ export default function BadmintonPage() {
       {/* Hero */}
       <Hero
         title="Badminton beim TBO"
-        subtitle="4 Badmintoncourts mit PVC-Schwingboden und über 10 Metern Deckenhöhe – ganzjährig bespielbar."
+        subtitle="4 Badmintoncourts mit PVC-Schwingboden und modernster LED-Beleuchtung – ganzjährig bespielbar."
         label="BADMINTON"
         backgroundImage="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=1600&q=80"
         videoSrc="/videos/badminton_hero_placeholder.mp4"
@@ -97,9 +97,9 @@ export default function BadmintonPage() {
                 <span>Kalorienverbrauch</span>
               </div>
               <div className="badminton-why__feature">
-                <span className="material-symbols-outlined">speed</span>
-                <strong>300+ km/h</strong>
-                <span>Smash-Geschwindigkeit</span>
+                <span className="material-symbols-outlined">self_improvement</span>
+                <strong>Stressabbau</strong>
+                <span>Kopf frei bekommen</span>
               </div>
               <div className="badminton-why__feature">
                 <span className="material-symbols-outlined">groups</span>

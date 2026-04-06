@@ -10,8 +10,8 @@ const TIME_SLOTS = [
 ];
 
 const SURFACES = [
-  { id: 'hart', label: 'Hallen-Hartplatz', count: 4, icon: 'warehouse' },
-  { id: 'sand', label: 'Sandplatz', count: 8, icon: 'park' },
+  { id: 'hallenplatz', label: 'Hallenplatz (Granulat)', count: 6, icon: 'warehouse' },
+  { id: 'freiplatz', label: 'Freiplatz (Draußen)', count: 2, icon: 'park' },
 ];
 
 const WEEKDAYS = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
@@ -19,7 +19,7 @@ const MONTHS_SHORT = ['Jan.', 'Feb.', 'März', 'Apr.', 'Mai', 'Juni', 'Juli', 'A
 
 export default function TennisBookingPage() {
   const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedSurface, setSelectedSurface] = useState('hart');
+  const [selectedSurface, setSelectedSurface] = useState('hallenplatz');
   const [selectedTime, setSelectedTime] = useState(null);
 
   const formatDate = (date) => {

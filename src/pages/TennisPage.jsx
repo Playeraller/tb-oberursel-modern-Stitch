@@ -13,7 +13,7 @@ const COURT_TYPES = [
     icon: 'park',
     title: 'Freiplätze',
     count: '2',
-    features: ['Gepflegter Sandbelag', 'Natürliches Spielgefühl', 'April – Oktober'],
+    features: ['Spielen an der frischen Luft', 'Optimale Lichtverhältnisse', 'April – Oktober'],
   },
 ];
 
