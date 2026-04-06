@@ -6,12 +6,14 @@ import './PuttersParadisePage.css';
 const PRICING = [
   {
     title: 'Einzelticket',
-    price: '7,00 €',
-    unit: '/ Erwachsene',
+    prices: [
+      { amount: '7,00 €', unit: '/ Erwachsene' },
+      { amount: '5,00 €', unit: '/ Kinder' },
+    ],
     features: [
       'Eine Runde über 13 Bahnen',
       'Schläger & Ball inklusive',
-      'Kinder (bis 16 J.): 5,00 €',
+      'Kinder bis 16 Jahre',
     ],
   },
   {
@@ -28,10 +30,11 @@ const PRICING = [
   },
   {
     title: 'Zehnerkarte & Extras',
-    price: '60,00 €',
-    unit: '/ 10er Erwachsene',
+    prices: [
+      { amount: '60,00 €', unit: '/ 10er Erw.' },
+      { amount: '35,00 €', unit: '/ 10er Kinder' },
+    ],
     features: [
-      'Zehnerkarte Kinder: 35,00 €',
       'Wiederholungsrunde Erw.: 5,00 €',
       'Wiederholungsrunde Kinder: 3,50 €',
     ],
