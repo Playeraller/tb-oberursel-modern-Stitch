@@ -31,9 +31,9 @@ export default function TennisPage() {
     <div className="tennis-page">
       {/* Video Hero */}
       <Hero
-        title="Kraft & Präzision"
-        subtitle="8 erstklassige Plätze – Indoor und Outdoor. Entdecken Sie die perfekte Spielfläche für Ihr Level."
-        label="DIE ANLAGE"
+        title="Tennis beim TBO – Sport und Spaß für die ganze Familie"
+        subtitle="6 Hallenplätze mit gelenkschonendem Granulat und 2 gepflegte Sandplätze für den Sommer."
+        label="TENNIS"
         videoSrc="/videos/tennis_hero_placeholder.mp4"
         backgroundImage="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1600&q=80"
         align="left"

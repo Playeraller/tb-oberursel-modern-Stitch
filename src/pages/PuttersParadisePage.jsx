@@ -30,9 +30,9 @@ export default function PuttersParadisePage() {
     <div className="putters-page">
       {/* Hero */}
       <Hero
-        title="Putter's Paradise"
-        subtitle="Das ultimative Adventure-Golf-Erlebnis. 13 kreative Bahnen für Familienspaß und Gruppen-Herausforderungen."
-        label="ADVENTURE GOLF"
+        title="Minigolf beim TBO"
+        subtitle="13 kreative Bahnen im Grünen – ein entspannter Spaß für Familien, Freunde und Gruppen."
+        label="ABENTEUER UND SPASS"
         backgroundImage="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1600&q=80"
         videoSrc="/videos/putters_hero_placeholder.mp4"
       >
