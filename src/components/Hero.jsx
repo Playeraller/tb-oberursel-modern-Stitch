@@ -25,9 +25,12 @@ export default function Hero({
             muted
             loop
             playsInline
-            poster={backgroundImage}
+            {...(backgroundImage ? { poster: backgroundImage } : {})}
           >
             <source src={videoSrc} type="video/mp4" />
+            {backgroundImage && (
+              <img src={backgroundImage} alt={title} title="Your browser does not support the video tag." />
+            )}
           </video>
         )}
         
