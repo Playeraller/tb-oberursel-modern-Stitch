@@ -29,16 +29,15 @@ export default function Hero({
           >
             <source src={videoSrc} type="video/mp4" />
             {backgroundImage && (
-              <img src={backgroundImage} alt={title} title="Your browser does not support the video tag." />
+              <img src={backgroundImage} title="Your browser does not support the video tag." />
             )}
           </video>
         )}
         
-        {!videoSrc && backgroundImage && (
+        {backgroundImage && !videoSrc && (
           <img
             className="hero__image"
             src={backgroundImage}
-            alt={title}
             loading="eager"
           />
         )}

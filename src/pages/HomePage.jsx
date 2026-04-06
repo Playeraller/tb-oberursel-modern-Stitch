@@ -34,7 +34,7 @@ export default function HomePage() {
       <Hero
         title="Willkommen beim TBO"
         subtitle="Ihr moderner Treffpunkt für Sport, Spaß und Gemeinschaft in Oberursel."
-        backgroundImage="https://images.unsplash.com/photo-1551773188-d63e5e5d0f65?w=1600&q=80"
+        videoSrc="/videos/home_hero_kinetic_macro.mp4"
         label="TENNIS BADMINTON OBERURSEL"
       >
         <Link to="/tennis" className="btn btn--primary btn--large">
