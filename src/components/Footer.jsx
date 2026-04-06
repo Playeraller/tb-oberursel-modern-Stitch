@@ -12,7 +12,7 @@ export default function Footer() {
               <span className="footer__logo-mark">TBO</span>
             </Link>
             <p className="footer__desc">
-              Tennis Badminton Oberursel – Ihr moderner Treffpunkt für Sport, Spaß und Gemeinschaft.
+              Tennis Badminton Oberursel – Ihre Anlage für Sport und Spaß in Oberursel.
             </p>
           </div>
 
@@ -22,6 +22,7 @@ export default function Footer() {
             <Link to="/tennis" className="footer__link" id="footer-tennis">Tennis</Link>
             <Link to="/badminton" className="footer__link" id="footer-badminton">Badminton</Link>
             <Link to="/putters-paradise" className="footer__link" id="footer-putters">Putter's Paradise</Link>
+            <a href="https://casa-primavera-oberursel.de" target="_blank" rel="noopener noreferrer" className="footer__link" id="footer-gastro">Casa Primavera</a>
           </div>
 
           {/* Buchung Links */}
@@ -36,11 +37,11 @@ export default function Footer() {
             <h4 className="footer__heading">Kontakt</h4>
             <p className="footer__contact">
               <span className="material-symbols-outlined">location_on</span>
-              Oberstedter Str. 43, 61440 Oberursel
+              Oberstedter Str. 41–43, 61440 Oberursel
             </p>
             <p className="footer__contact">
               <span className="material-symbols-outlined">call</span>
-              06171 / 28 45 490
+              06171 / 91 35 35
             </p>
           </div>
         </div>

@@ -6,21 +6,21 @@ import './HomePage.css';
 const ACTIVITIES = [
   {
     title: 'Tennis',
-    description: '6 Hallenplätze und 2 Außenplätze – für jedes Level die richtige Spielfläche.',
+    description: '6 Hallenplätze mit gelenkschonendem Granulat und 2 Freiplätze – für Einsteiger und Vereinsspieler.',
     image: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800&q=80',
     to: '/tennis',
     label: '8 Plätze',
   },
   {
     title: 'Badminton',
-    description: '4 professionelle Felder mit über 10m Deckenhöhe für maximale Spielfreiheit.',
+    description: '4 Badmintoncourts mit PVC-Schwingboden und über 10 m Deckenhöhe.',
     image: 'https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=800&q=80',
     to: '/badminton',
-    label: '4 Felder',
+    label: '4 Courts',
   },
   {
     title: "Putter's Paradise",
-    description: '13 kreative Bahnen für Familienspaß und Gruppen-Herausforderungen.',
+    description: '13 Adventure-Golf-Bahnen durch Landschaften, über Brücken und durch Täler.',
     image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80',
     to: '/putters-paradise',
     label: '13 Bahnen',
@@ -50,9 +50,9 @@ export default function HomePage() {
       <section className="section home-activities" id="activities-section">
         <div className="container">
           <div className="home-activities__header">
-            <span className="label">Unser Angebot</span>
-            <h2>Finden Sie Ihren Sport</h2>
-            <p>Von Tennis über Badminton bis hin zu Adventure-Golf – bei uns ist für jeden etwas dabei.</p>
+            <span className="label">Unsere Anlage</span>
+            <h2>Sport für die ganze Familie</h2>
+            <p>Tennis, Badminton oder Adventure Golf – auf unserer Anlage in Oberursel finden Sie den richtigen Sport.</p>
           </div>
           <div className="home-activities__grid">
             {ACTIVITIES.map((a) => (
@@ -67,39 +67,40 @@ export default function HomePage() {
         <div className="container">
           <div className="home-stats__grid">
             <div className="home-stat">
-              <span className="home-stat__number">8</span>
-              <span className="home-stat__label">Tennisplätze</span>
+              <span className="home-stat__number">6</span>
+              <span className="home-stat__label">Hallentennisplätze</span>
+            </div>
+            <div className="home-stat">
+              <span className="home-stat__number">2</span>
+              <span className="home-stat__label">Tennis-Freiplätze</span>
             </div>
             <div className="home-stat">
               <span className="home-stat__number">4</span>
-              <span className="home-stat__label">Badminton-Felder</span>
+              <span className="home-stat__label">Badmintoncourts</span>
             </div>
             <div className="home-stat">
               <span className="home-stat__number">13</span>
-              <span className="home-stat__label">Golf-Bahnen</span>
-            </div>
-            <div className="home-stat">
-              <span className="home-stat__number">30+</span>
-              <span className="home-stat__label">Jahre Erfahrung</span>
+              <span className="home-stat__label">Adventure-Golf-Bahnen</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section home-cta" id="cta-section">
+      {/* Gastronomie Teaser */}
+      <section className="section home-gastro" id="gastro-section">
         <div className="container">
           <div className="home-cta__card">
-            <h2>Werden Sie Teil der TBO-Familie</h2>
-            <p>Erleben Sie erstklassige Sportanlagen, eine lebendige Gemeinschaft und unvergessliche Momente – direkt in Oberursel.</p>
+            <span className="material-symbols-outlined" style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>restaurant</span>
+            <h2>Nach dem Sport gut essen</h2>
+            <p>Direkt auf unserer Anlage befindet sich die Pizzeria <strong>Casa Primavera</strong> – der perfekte Ort für einen entspannten Ausklang nach dem Spiel.</p>
             <div className="home-cta__actions">
-              <Link to="/tennis-booking" className="btn btn--primary btn--large">
-                Jetzt Platz buchen
-                <span className="material-symbols-outlined">arrow_forward</span>
-              </Link>
-              <a href="tel:0617128454900" className="btn btn--outline btn--large">
+              <a href="https://casa-primavera-oberursel.de" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--large">
+                Casa Primavera besuchen
+                <span className="material-symbols-outlined">open_in_new</span>
+              </a>
+              <a href="tel:06171913535" className="btn btn--outline btn--large">
                 <span className="material-symbols-outlined">call</span>
-                Anrufen
+                06171 / 91 35 35
               </a>
             </div>
           </div>

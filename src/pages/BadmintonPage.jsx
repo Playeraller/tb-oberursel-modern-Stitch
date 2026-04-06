@@ -4,9 +4,9 @@ import PricingCard from '../components/PricingCard';
 import './BadmintonPage.css';
 
 const STATS = [
-  { number: '04', label: 'Verfügbare Felder', icon: 'grid_view' },
+  { number: '04', label: 'Badmintoncourts', icon: 'grid_view' },
   { number: '10m+', label: 'Deckenhöhe', icon: 'height' },
-  { number: '∞', label: 'Leihschläger verfügbar', icon: 'sports_tennis' },
+  { number: 'PVC', label: 'Schwingboden', icon: 'layers' },
 ];
 
 const PRICING = [
@@ -14,20 +14,20 @@ const PRICING = [
     title: 'Vormittags',
     price: '13,75 €',
     unit: '/ 60 Min.',
-    features: ['Mo – Fr, 8:00 – 12:00', 'Alle 4 Felder', 'Idealt für Senioren & Frühsportler'],
+    features: ['Mo – Fr, 8:00 – 12:00', 'Alle 4 Courts', 'Ideal für Senioren & Frühsportler'],
   },
   {
     title: 'Abends & Wochenende',
     price: '15,50 €',
     unit: '/ 60 Min.',
-    features: ['Mo – Fr ab 17:00', 'Sa & So ganztags', 'Prime-Time Slots'],
+    features: ['Mo – Fr ab 17:00', 'Sa & So ganztags', 'Beliebteste Spielzeiten'],
     highlighted: true,
   },
   {
     title: 'Doppelstunde',
     price: '27,50 €',
     unit: '/ 120 Min.',
-    features: ['Jederzeit verfügbar', '10% Ersparnis', 'Perfekt für Training'],
+    features: ['Jederzeit verfügbar', '10 % Ersparnis', 'Ideal für längere Trainingseinheiten'],
   },
 ];
 
@@ -37,14 +37,14 @@ export default function BadmintonPage() {
       {/* Hero */}
       <Hero
         title="Badminton beim TBO"
-        subtitle="4 gepflegte Felder mit über 10 Metern Deckenhöhe für optimale Spielbedingungen."
+        subtitle="4 Badmintoncourts mit PVC-Schwingboden und über 10 Metern Deckenhöhe – ganzjährig bespielbar."
         label="BADMINTON"
         backgroundImage="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=1600&q=80"
         videoSrc="/videos/badminton_hero_placeholder.mp4"
         align="left"
       >
         <Link to="/badminton-booking" className="btn btn--primary btn--large">
-          Feld reservieren
+          Court reservieren
           <span className="material-symbols-outlined">arrow_forward</span>
         </Link>
       </Hero>
@@ -88,8 +88,8 @@ export default function BadmintonPage() {
         <div className="container">
           <div className="badminton-why__content">
             <span className="label">Warum Badminton?</span>
-            <h2>Schnelligkeit. Präzision. Intensität.</h2>
-            <p>Badminton ist eine der intensivsten Racketsportarten der Welt. Trainieren Sie Reflexe, Ausdauer und taktisches Denken – alles in einer Stunde. Unsere professionelle Hallenausstattung garantiert optimale Spielbedingungen bei jedem Wetter.</p>
+            <h2>Schnell, vielseitig und für jedes Alter</h2>
+            <p>Badminton verbindet Bewegung, Reaktionsvermögen und jede Menge Spaß – ob im Einzel oder Doppel. Unsere Courts mit PVC-Schwingboden sind gelenkschonend und bieten bei jedem Wetter beste Spielbedingungen.</p>
             <div className="badminton-why__features">
               <div className="badminton-why__feature">
                 <span className="material-symbols-outlined">local_fire_department</span>

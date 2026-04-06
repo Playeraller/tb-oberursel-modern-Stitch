@@ -5,25 +5,30 @@ import './TennisPage.css';
 const COURT_TYPES = [
   {
     icon: 'warehouse',
-    title: 'Hallen-Hartplätze',
+    title: 'Hallentennisplätze',
     count: '6',
-    features: ['Klimatisierte Halle', 'LED-Turnier-Beleuchtung', 'Ganzjährig bespielbar'],
+    features: ['Gelenkschonender & rückenfreundlicher Granulatbelag', 'Ganzjährig bespielbar', 'LED-Beleuchtung'],
   },
   {
     icon: 'park',
-    title: 'Sandplätze (Außen)',
+    title: 'Freiplätze',
     count: '2',
-    features: ['Professionelle Platzpflege', 'Natürliches Spielgefühl', 'April – Oktober'],
+    features: ['Gepflegter Sandbelag', 'Natürliches Spielgefühl', 'April – Oktober'],
   },
 ];
 
 const PRICES = [
   { label: '', winter: 'Wintersaison', summer: 'Sommersaison' },
-  { label: 'Hallen-Hartplatz (60 Min.)', winter: '22,00 €', summer: '18,00 €' },
-  { label: 'Sandplatz Außen (60 Min.)', winter: '—', summer: '14,00 €' },
+  { label: 'Hallentennisplatz (60 Min.)', winter: '22,00 €', summer: '18,00 €' },
+  { label: 'Freiplatz (60 Min.)', winter: '—', summer: '14,00 €' },
   { label: 'Flutlicht-Zuschlag', winter: '3,50 €', summer: '3,50 €' },
-  { label: 'Saisonkarte Halle', winter: '890,00 €', summer: '—' },
-  { label: 'Saisonkarte Außen', winter: '—', summer: '420,00 €' },
+  { label: 'Abo Halle (32 Wo.)', winter: '890,00 €', summer: '—' },
+  { label: 'Abo Freiplatz (20 Wo.)', winter: '—', summer: '420,00 €' },
+];
+
+const SPARSTUNDEN = [
+  { label: 'Frühaufsteher', zeit: 'Mo – Fr, 7:00 – 9:00', rabatt: '–20 %' },
+  { label: 'Nachtschwärmer', zeit: 'Mo – Do, 21:00 – 23:00', rabatt: '–20 %' },
 ];
 
 export default function TennisPage() {
@@ -31,8 +36,8 @@ export default function TennisPage() {
     <div className="tennis-page">
       {/* Video Hero */}
       <Hero
-        title="Tennis beim TBO – Sport und Spaß für die ganze Familie"
-        subtitle="6 Hallenplätze mit gelenkschonendem Granulat und 2 gepflegte Sandplätze für den Sommer."
+        title="Tennis beim TBO"
+        subtitle="6 Hallentennisplätze mit gelenkschonendem Granulatbelag und 2 gepflegte Freiplätze für den Sommer."
         label="TENNIS"
         videoSrc="/videos/tennis_hero_placeholder.mp4"
         backgroundImage="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1600&q=80"
@@ -78,8 +83,8 @@ export default function TennisPage() {
         <div className="container">
           <div className="tennis-pricing__header">
             <span className="label">Preise</span>
-            <h2>Saisonbezogene Tarife</h2>
-            <p>Faire Preise für 60-Minuten-Einheiten. Saisonkarten für Vielspieler verfügbar.</p>
+            <h2>Unsere Tarife</h2>
+            <p>Einzelpreise pro Stunde und Abo-Angebote für Vielspieler – fair und transparent.</p>
           </div>
           <div className="tennis-pricing__table-wrap">
             <table className="tennis-pricing__table" id="price-table">
@@ -108,14 +113,45 @@ export default function TennisPage() {
         </div>
       </section>
 
+      {/* Sparstunden */}
+      <section className="section tennis-sparstunden" id="tennis-sparstunden">
+        <div className="container">
+          <div className="tennis-pricing__header">
+            <span className="label">Tipp</span>
+            <h2>Sparstunden für Frühaufsteher & Nachtschwärmer</h2>
+            <p>Außerhalb der Hauptzeiten spielen Sie bei uns zum reduzierten Preis.</p>
+          </div>
+          <div className="tennis-pricing__table-wrap">
+            <table className="tennis-pricing__table" id="sparstunden-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Zeitfenster</th>
+                  <th>Ersparnis</th>
+                </tr>
+              </thead>
+              <tbody>
+                {SPARSTUNDEN.map((row, i) => (
+                  <tr key={i}>
+                    <td className="tennis-pricing__label">{row.label}</td>
+                    <td>{row.zeit}</td>
+                    <td>{row.rabatt}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="section section--dark tennis-cta" id="tennis-cta">
         <div className="container">
           <div className="tennis-cta__content">
-            <h2>Verbessern Sie Ihr Spiel noch heute</h2>
-            <p>Reservieren Sie Ihren Wunschplatz in wenigen Klicks – online und unkompliziert.</p>
+            <h2>Lust auf eine Runde Tennis?</h2>
+            <p>Reservieren Sie Ihren Wunschplatz bequem online – oder rufen Sie uns an.</p>
             <Link to="/tennis-booking" className="btn btn--primary btn--large">
-              Jetzt buchen
+              Platz reservieren
               <span className="material-symbols-outlined">arrow_forward</span>
             </Link>
           </div>

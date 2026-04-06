@@ -8,7 +8,7 @@ const PRICING = [
     title: 'Normaltarif',
     price: '9,50 €',
     unit: '/ Person',
-    features: ['Einzelne Runde über 13 Löcher', 'Schläger & Ball inklusive', 'Keine Zeitbegrenzung'],
+    features: ['Eine Runde über 13 Bahnen', 'Schläger & Ball inklusive', 'Keine Zeitbegrenzung'],
   },
   {
     title: 'Familien-Paket',
@@ -30,9 +30,9 @@ export default function PuttersParadisePage() {
     <div className="putters-page">
       {/* Hero */}
       <Hero
-        title="Minigolf beim TBO"
-        subtitle="13 kreative Bahnen im Grünen – ein entspannter Spaß für Familien, Freunde und Gruppen."
-        label="ABENTEUER UND SPASS"
+        title="Putter's Paradise – Adventure Golf beim TBO"
+        subtitle="13 liebevoll gestaltete Bahnen durch Landschaften, über Brücken und durch Täler – Spaß für die ganze Familie."
+        label="ADVENTURE GOLF"
         backgroundImage="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1600&q=80"
         videoSrc="/videos/putters_hero_placeholder.mp4"
       >
@@ -47,19 +47,19 @@ export default function PuttersParadisePage() {
         <div className="container">
           <div className="putters-info__grid">
             <div className="putters-info__card">
-              <span className="material-symbols-outlined">nature</span>
-              <h3>Von der Natur inspiriert</h3>
-              <p>Navigieren Sie durch Wasserhindernisse und über Steinbrücken – jede Bahn erzählt ihre eigene Geschichte.</p>
+              <span className="material-symbols-outlined">landscape</span>
+              <h3>Eine kleine Abenteuerreise</h3>
+              <p>Spielen Sie sich durch abwechslungsreiche Landschaften, über Brücken und durch Täler – jede Bahn ist ein kleines Abenteuer.</p>
             </div>
             <div className="putters-info__card">
               <span className="material-symbols-outlined">schedule</span>
-              <h3>Heute geöffnet</h3>
-              <p>Letzter Einlass 1 Stunde vor Schließung. Saisonale Öffnungszeiten – kontaktieren Sie uns für Details.</p>
+              <h3>Öffnungszeiten</h3>
+              <p>Saisonabhängig geöffnet. Letzter Einlass 1 Stunde vor Schließung – rufen Sie uns gerne an für aktuelle Zeiten.</p>
             </div>
             <div className="putters-info__card">
               <span className="material-symbols-outlined">celebration</span>
-              <h3>Events & Feiern</h3>
-              <p>Feiern Sie Ihre nächste Party im Paradies – Geburtstage, Teamevents und mehr.</p>
+              <h3>Kindergeburtstage & Gruppenevents</h3>
+              <p>Adventure Golf eignet sich prima für Geburtstage, Firmenevents oder einen Ausflug mit Freunden.</p>
             </div>
           </div>
         </div>
@@ -85,8 +85,8 @@ export default function PuttersParadisePage() {
         <div className="container">
           <div className="putters-birthday__content">
             <span className="label">Kindergeburtstage</span>
-            <h2>Unvergessliche Geburtstagsfeiern</h2>
-            <p>Machen Sie den Ehrentag Ihres Kindes zu etwas Besonderem mit einer privaten Golfrunde, dekorierten Tischen und köstlichem Catering in unserem schönen Garten.</p>
+            <h2>Geburtstag feiern beim Adventure Golf</h2>
+            <p>Ein Kindergeburtstag auf unserer Anlage ist ein echtes Highlight – mit einer privaten Golfrunde, dekorierten Tischen und leckerer Verpflegung direkt im Grünen.</p>
             <div className="putters-birthday__features">
               <div className="putters-birthday__feature">
                 <span className="material-symbols-outlined">cake</span>
@@ -109,9 +109,9 @@ export default function PuttersParadisePage() {
           <div className="putters-testimonial__content">
             <span className="material-symbols-outlined putters-testimonial__icon">format_quote</span>
             <blockquote>
-              „Das beste Minigolf in der Region. Die Bahnen sind anspruchsvoll, aber fair, und die Atmosphäre ist einfach unglaublich!"
+              „Tolles Adventure Golf! Die Bahnen sind abwechslungsreich und machen sowohl Kindern als auch Erwachsenen richtig Spaß.&quot;
             </blockquote>
-            <span className="putters-testimonial__author">– Begeisterter Besucher</span>
+            <span className="putters-testimonial__author">– Familie aus Oberursel</span>
           </div>
         </div>
       </section>
