@@ -35,7 +35,7 @@ export default function TennisPage() {
         subtitle="8 erstklassige Plätze – Indoor und Outdoor. Entdecken Sie die perfekte Spielfläche für Ihr Level."
         label="DIE ANLAGE"
         videoSrc="/videos/tennis_hero_placeholder.mp4"
-        backgroundImage="/images/tennis_hero_placeholder.webp"
+        backgroundImage="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1600&q=80"
         align="left"
       >
         <Link to="/tennis-booking" className="btn btn--primary btn--large">
