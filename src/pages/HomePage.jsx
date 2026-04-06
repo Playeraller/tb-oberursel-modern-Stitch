@@ -20,7 +20,7 @@ const ACTIVITIES = [
   },
   {
     title: "Putter's Paradise",
-    description: '13 Adventure-Golf-Bahnen durch Landschaften, über Brücken und durch Täler.',
+    description: '13 Adventure-Minigolf-Bahnen durch Landschaften, über Brücken und durch Täler.',
     image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80',
     to: '/putters-paradise',
     label: '13 Bahnen',
@@ -52,7 +52,7 @@ export default function HomePage() {
           <div className="home-activities__header">
             <span className="label">Unsere Anlage</span>
             <h2>Sport für die ganze Familie</h2>
-            <p>Tennis, Badminton oder Adventure Golf – auf unserer Anlage in Oberursel finden Sie den richtigen Sport.</p>
+            <p>Tennis, Badminton oder Adventure-Minigolf – auf unserer Anlage in Oberursel finden Sie den richtigen Sport.</p>
           </div>
           <div className="home-activities__grid">
             {ACTIVITIES.map((a) => (
@@ -80,7 +80,7 @@ export default function HomePage() {
             </div>
             <div className="home-stat">
               <span className="home-stat__number">13</span>
-              <span className="home-stat__label">Adventure-Golf-Bahnen</span>
+              <span className="home-stat__label">Adventure-Minigolf-Bahnen</span>
             </div>
           </div>
         </div>

@@ -30,8 +30,8 @@ export default function PuttersParadisePage() {
     <div className="putters-page">
       {/* Hero */}
       <Hero
-        title="Putter's Paradise – Adventure Golf beim TBO"
-        subtitle="13 liebevoll gestaltete Bahnen durch Landschaften, über Brücken und durch Täler – Spaß für die ganze Familie."
+        title="Der große Adventure-Minigolf-Spaß für alle"
+        subtitle="13 abwechslungsreiche Bahnen voller Hindernisse und Überraschungen"
         label="ADVENTURE GOLF"
         backgroundImage="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1600&q=80"
         videoSrc="/videos/putters_hero_placeholder.mp4"
@@ -48,8 +48,8 @@ export default function PuttersParadisePage() {
           <div className="putters-info__grid">
             <div className="putters-info__card">
               <span className="material-symbols-outlined">landscape</span>
-              <h3>Eine kleine Abenteuerreise</h3>
-              <p>Spielen Sie sich durch abwechslungsreiche Landschaften, über Brücken und durch Täler – jede Bahn ist ein kleines Abenteuer.</p>
+              <h3>Abenteuer auf Kunstrasen</h3>
+              <p>Spiele dich durch Tunnel, über Brücken und um Wasserhindernisse.</p>
             </div>
             <div className="putters-info__card">
               <span className="material-symbols-outlined">schedule</span>
@@ -58,8 +58,8 @@ export default function PuttersParadisePage() {
             </div>
             <div className="putters-info__card">
               <span className="material-symbols-outlined">celebration</span>
-              <h3>Kindergeburtstage & Gruppenevents</h3>
-              <p>Adventure Golf eignet sich prima für Geburtstage, Firmenevents oder einen Ausflug mit Freunden.</p>
+              <h3>Events & Feiern</h3>
+              <p>Ideal für Ausflüge mit Freunden oder der Familie. Einfach vorbeikommen und loslegen.</p>
             </div>
           </div>
         </div>
@@ -76,29 +76,6 @@ export default function PuttersParadisePage() {
             {PRICING.map((p) => (
               <PricingCard key={p.title} {...p} />
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Birthday Section */}
-      <section className="section putters-birthday" id="birthday-section">
-        <div className="container">
-          <div className="putters-birthday__content">
-            <span className="label">Kindergeburtstage</span>
-            <h2>Geburtstag feiern beim Adventure Golf</h2>
-            <p>Ein Kindergeburtstag auf unserer Anlage ist ein echtes Highlight – mit einer privaten Golfrunde, dekorierten Tischen und leckerer Verpflegung direkt im Grünen.</p>
-            <div className="putters-birthday__features">
-              <div className="putters-birthday__feature">
-                <span className="material-symbols-outlined">cake</span>
-                <strong>Kuchen & Deko</strong>
-                <span>Wir kümmern uns um alles</span>
-              </div>
-              <div className="putters-birthday__feature">
-                <span className="material-symbols-outlined">emoji_events</span>
-                <strong>Pokal</strong>
-                <span>Für das Geburtstagskind</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
