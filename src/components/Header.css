@@ -14,7 +14,17 @@
   background: transparent;
 }
 
-.header--scrolled {
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: transparent;
+  transition: all var(--transition-base);
+  pointer-events: none;
+}
+
+.header--scrolled::before {
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
@@ -46,6 +56,10 @@
 
 .header--scrolled .header__logo-mark {
   color: var(--primary);
+}
+
+.header--open .header__logo-mark {
+  color: var(--primary) !important;
 }
 
 .header__logo-text {
@@ -132,10 +146,8 @@
   background: var(--on-surface);
 }
 
-.header__nav--open .header__burger span,
-.header__nav--open .header__logo-mark {
-  background: var(--on-surface);
-  color: var(--primary);
+.header--open .header__burger span {
+  background: var(--on-surface) !important;
 }
 
 .header__burger--open span:nth-child(1) {
@@ -195,7 +207,7 @@
     padding: var(--space-4) var(--space-10);
   }
 
-  .header {
+  .header::before {
     background: var(--glass-bg);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);

@@ -25,7 +25,7 @@ export default function Header() {
   ];
 
   return (
-    <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
+    <header className={`header ${scrolled ? 'header--scrolled' : ''} ${isMenuOpen ? 'header--open' : ''}`}>
       <div className="header__inner container">
         <Link to="/" className="header__logo" id="header-logo" onClick={() => setIsMenuOpen(false)}>
           <span className="header__logo-mark">TBO</span>
