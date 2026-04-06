@@ -1,0 +1,165 @@
+/* ============================================================
+   PUTTER'S PARADISE PAGE
+   ============================================================ */
+
+/* --- Info --- */
+.putters-info__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+.putters-info__card {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.putters-info__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.putters-info__card .material-symbols-outlined {
+  font-size: 40px;
+  color: var(--secondary);
+  margin-bottom: var(--space-4);
+}
+
+.putters-info__card h3 {
+  margin-bottom: var(--space-3);
+  font-size: 1.25rem;
+}
+
+.putters-info__card p {
+  font-size: 0.9375rem;
+}
+
+@media (max-width: 768px) {
+  .putters-info__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* --- Pricing --- */
+.putters-pricing__header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto var(--space-12);
+}
+
+.putters-pricing__header .label {
+  display: block;
+  margin-bottom: var(--space-3);
+  color: var(--secondary);
+}
+
+.putters-pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  max-width: 960px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+@media (max-width: 960px) {
+  .putters-pricing__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}
+
+/* --- Birthday --- */
+.putters-birthday__content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.putters-birthday__content .label {
+  display: block;
+  margin-bottom: var(--space-3);
+  color: var(--secondary);
+}
+
+.putters-birthday__content h2 {
+  margin-bottom: var(--space-4);
+}
+
+.putters-birthday__content > p {
+  max-width: 600px;
+  margin: 0 auto var(--space-10);
+}
+
+.putters-birthday__features {
+  display: flex;
+  gap: var(--space-8);
+  justify-content: center;
+}
+
+.putters-birthday__feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-6) var(--space-8);
+  background: var(--surface-container-low);
+  border-radius: var(--radius-lg);
+}
+
+.putters-birthday__feature .material-symbols-outlined {
+  font-size: 32px;
+  color: var(--secondary);
+}
+
+.putters-birthday__feature strong {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  color: var(--on-surface);
+}
+
+.putters-birthday__feature span:last-child {
+  font-size: 0.8125rem;
+  color: var(--on-surface-variant);
+}
+
+@media (max-width: 768px) {
+  .putters-birthday__features {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* --- Testimonial --- */
+.putters-testimonial__content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.putters-testimonial__icon {
+  font-size: 48px;
+  color: var(--secondary-container);
+  margin-bottom: var(--space-6);
+}
+
+.putters-testimonial__content blockquote {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 400;
+  color: var(--on-primary);
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: var(--space-6);
+}
+
+.putters-testimonial__author {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.5);
+}

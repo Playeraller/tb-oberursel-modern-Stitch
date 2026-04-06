@@ -1,0 +1,245 @@
+/* ============================================================
+   BOOKING PAGES (Tennis + Badminton shared styles)
+   ============================================================ */
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.booking-left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+/* --- Surface Selection --- */
+.booking-surfaces h4,
+.booking-times h4 {
+  margin-bottom: var(--space-4);
+}
+
+.booking-surfaces__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.surface-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  text-align: center;
+}
+
+.surface-btn:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.surface-btn--active {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.surface-btn--active .material-symbols-outlined,
+.surface-btn--active .surface-btn__count {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.surface-btn .material-symbols-outlined {
+  font-size: 28px;
+  color: var(--secondary);
+}
+
+.surface-btn strong {
+  font-size: 0.9375rem;
+}
+
+.surface-btn__count {
+  font-size: 0.75rem;
+  color: var(--on-surface-variant);
+}
+
+/* --- Time Slots --- */
+.booking-times__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-2);
+}
+
+.time-btn {
+  padding: var(--space-3) var(--space-4);
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-sm);
+  color: var(--on-surface);
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.time-btn:hover {
+  background: var(--surface-container-low);
+}
+
+.time-btn--active {
+  background: var(--secondary) !important;
+  color: var(--on-secondary) !important;
+}
+
+/* --- Summary --- */
+.booking-summary {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-6));
+}
+
+.booking-summary h3 {
+  margin-bottom: var(--space-6);
+}
+
+.booking-summary__rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.booking-summary__row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.booking-summary__row .label {
+  font-size: 0.6875rem;
+}
+
+.booking-summary__row span:last-child {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--on-surface);
+}
+
+.booking-summary__note {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.8125rem;
+  color: var(--on-surface-variant);
+  padding: var(--space-4);
+  background: var(--surface-container-low);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-6);
+}
+
+.booking-summary__note .material-symbols-outlined {
+  font-size: 18px;
+  color: var(--secondary);
+}
+
+.booking-summary__btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.booking-summary__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* --- Equipment --- */
+.booking-equipment h4 {
+  margin-bottom: var(--space-4);
+}
+
+.equipment-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.equipment-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.equipment-item__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.equipment-item__info strong {
+  font-size: 0.9375rem;
+  color: var(--on-surface);
+}
+
+.equipment-item__info span {
+  font-size: 0.8125rem;
+  color: var(--on-surface-variant);
+}
+
+.equipment-item__price {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* --- Storno --- */
+.booking-storno {
+  padding: var(--space-5);
+  background: var(--surface-container-low);
+  border-radius: var(--radius-md);
+}
+
+.booking-storno h5 {
+  margin-bottom: var(--space-2);
+  font-size: 0.875rem;
+}
+
+.booking-storno p {
+  font-size: 0.8125rem;
+}
+
+/* --- Mobile --- */
+@media (max-width: 960px) {
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-times__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .booking-summary {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-times__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-surfaces__grid {
+    grid-template-columns: 1fr;
+  }
+}

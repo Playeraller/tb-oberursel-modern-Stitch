@@ -1,0 +1,149 @@
+/* ============================================================
+   BADMINTON PAGE
+   ============================================================ */
+
+/* --- Stats --- */
+.badminton-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.badminton-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: center;
+  padding: var(--space-8);
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.badminton-stat:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.badminton-stat__icon {
+  font-size: 32px;
+  color: var(--secondary);
+  margin-bottom: var(--space-2);
+}
+
+.badminton-stat__number {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.badminton-stat__label {
+  font-size: 0.875rem;
+  color: var(--on-surface-variant);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .badminton-stats__grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+}
+
+/* --- Pricing --- */
+.badminton-pricing__header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto var(--space-12);
+}
+
+.badminton-pricing__header .label {
+  display: block;
+  margin-bottom: var(--space-3);
+  color: var(--secondary);
+}
+
+.badminton-pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  max-width: 960px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+@media (max-width: 960px) {
+  .badminton-pricing__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}
+
+/* --- Why Badminton --- */
+.badminton-why__content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.badminton-why__content .label {
+  display: block;
+  margin-bottom: var(--space-3);
+  color: var(--secondary);
+}
+
+.badminton-why__content h2 {
+  margin-bottom: var(--space-6);
+}
+
+.badminton-why__content > p {
+  max-width: 640px;
+  margin: 0 auto var(--space-12);
+}
+
+.badminton-why__features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.badminton-why__feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  background: var(--surface-container-low);
+  border-radius: var(--radius-lg);
+}
+
+.badminton-why__feature .material-symbols-outlined {
+  font-size: 32px;
+  color: var(--secondary);
+}
+
+.badminton-why__feature strong {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--on-surface);
+}
+
+.badminton-why__feature span:last-child {
+  font-size: 0.8125rem;
+  color: var(--on-surface-variant);
+}
+
+@media (max-width: 768px) {
+  .badminton-why__features {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}

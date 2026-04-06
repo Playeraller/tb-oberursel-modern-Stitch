@@ -1,0 +1,96 @@
+/* ============================================================
+   BOOKING CALENDAR
+   ============================================================ */
+.cal {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+}
+
+.cal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.cal__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.cal__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--on-surface-variant);
+  transition: all var(--transition-fast);
+}
+
+.cal__nav:hover {
+  background: var(--surface-container-low);
+  color: var(--on-surface);
+}
+
+.cal__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-1);
+  margin-bottom: var(--space-2);
+}
+
+.cal__weekday {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--space-2) 0;
+}
+
+.cal__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-1);
+}
+
+.cal__cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--on-surface);
+  transition: all var(--transition-fast);
+}
+
+.cal__cell--day {
+  cursor: pointer;
+}
+
+.cal__cell--day:hover {
+  background: var(--surface-container-low);
+}
+
+.cal__cell--today {
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.cal__cell--selected {
+  background: var(--secondary) !important;
+  color: var(--on-secondary) !important;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+}
+
+.cal__cell--blank {
+  pointer-events: none;
+}

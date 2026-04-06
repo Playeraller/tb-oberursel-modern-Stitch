@@ -1,0 +1,102 @@
+/* ============================================================
+   HOME PAGE
+   ============================================================ */
+
+/* --- Activities --- */
+.home-activities__header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto var(--space-12);
+}
+
+.home-activities__header .label {
+  display: block;
+  margin-bottom: var(--space-3);
+  color: var(--secondary);
+}
+
+.home-activities__header h2 {
+  margin-bottom: var(--space-4);
+}
+
+.home-activities__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+@media (max-width: 960px) {
+  .home-activities__grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+/* --- Stats --- */
+.home-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-8);
+  text-align: center;
+}
+
+.home-stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.home-stat__number {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 800;
+  color: var(--secondary-container);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.home-stat__label {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .home-stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-10);
+  }
+}
+
+/* --- CTA --- */
+.home-cta__card {
+  background: var(--surface-container-low);
+  border-radius: var(--radius-xl);
+  padding: var(--space-16) var(--space-12);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.home-cta__card h2 {
+  margin-bottom: var(--space-4);
+}
+
+.home-cta__card p {
+  max-width: 560px;
+  margin: 0 auto var(--space-8);
+}
+
+.home-cta__actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .home-cta__card {
+    padding: var(--space-10) var(--space-6);
+  }
+}

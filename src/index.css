@@ -1,0 +1,322 @@
+/* ============================================================
+   TBO OBERURSEL – DESIGN SYSTEM "THE KINETIC GALLERY"
+   Based on Stitch Design Tokens
+   ============================================================ */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* --- Material Symbols --- */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+
+/* ============================================================
+   1. DESIGN TOKENS (CSS Custom Properties)
+   ============================================================ */
+:root {
+  /* --- Colors --- */
+  --primary: #00113a;
+  --primary-container: #002366;
+  --on-primary: #ffffff;
+  --secondary: #2e6c00;
+  --secondary-container: #75fd00;
+  --on-secondary: #ffffff;
+  --surface: #f7faf8;
+  --surface-container-low: #f1f4f2;
+  --surface-container-lowest: #ffffff;
+  --surface-container: #ebeeec;
+  --on-surface: #181c1b;
+  --on-surface-variant: #3f4946;
+  --outline-variant: #c5c6d2;
+
+  /* --- Gradients --- */
+  --gradient-hero: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 100%);
+  --gradient-hero-overlay: linear-gradient(180deg, rgba(0,17,58,0.7) 0%, rgba(0,35,102,0.4) 100%);
+  --gradient-cta: linear-gradient(135deg, var(--secondary) 0%, #3d8f00 100%);
+
+  /* --- Typography --- */
+  --font-display: 'Lexend', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* --- Spacing (4px base) --- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* --- Roundness --- */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-pill: 999px;
+
+  /* --- Shadows (Ambient – No hard borders!) --- */
+  --shadow-sm: 0 4px 20px rgba(24, 28, 27, 0.04);
+  --shadow-md: 0 8px 40px rgba(24, 28, 27, 0.04);
+  --shadow-lg: 0 12px 60px rgba(24, 28, 27, 0.04);
+  --shadow-hover: 0 12px 40px rgba(24, 28, 27, 0.08);
+
+  /* --- Ghost Border --- */
+  --ghost-border: 1px solid rgba(197, 198, 210, 0.15);
+
+  /* --- Glassmorphism --- */
+  --glass-bg: rgba(247, 250, 248, 0.8);
+  --glass-blur: blur(24px);
+
+  /* --- Transitions --- */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* --- Layout --- */
+  --max-width: 1200px;
+  --nav-height: 72px;
+}
+
+/* ============================================================
+   2. CSS RESET
+   ============================================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--on-surface);
+  background-color: var(--surface);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+}
+
+/* ============================================================
+   3. TYPOGRAPHY
+   ============================================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--on-surface);
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--on-surface-variant);
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--on-surface-variant);
+}
+
+/* ============================================================
+   4. UTILITY CLASSES
+   ============================================================ */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.section {
+  padding: var(--space-24) 0;
+}
+
+.section--dark {
+  background: var(--gradient-hero);
+  color: var(--on-primary);
+}
+
+.section--dark h2,
+.section--dark h3,
+.section--dark h4,
+.section--dark p {
+  color: var(--on-primary);
+}
+
+.section--alt {
+  background-color: var(--surface-container-low);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-8);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background-color: var(--secondary);
+  color: var(--on-secondary);
+}
+
+.btn--primary:hover {
+  background-color: #3d8f00;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--on-surface);
+  box-shadow: inset 0 0 0 2px var(--outline-variant);
+}
+
+.btn--outline:hover {
+  box-shadow: inset 0 0 0 2px var(--secondary);
+  color: var(--secondary);
+}
+
+.btn--white {
+  background-color: var(--surface-container-lowest);
+  color: var(--primary);
+}
+
+.btn--white:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn--large {
+  padding: var(--space-4) var(--space-10);
+  font-size: 1.0625rem;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+/* ============================================================
+   5. ANIMATIONS
+   ============================================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays */
+.animate-delay-1 { transition-delay: 0.1s; }
+.animate-delay-2 { transition-delay: 0.2s; }
+.animate-delay-3 { transition-delay: 0.3s; }
+.animate-delay-4 { transition-delay: 0.4s; }
+
+/* ============================================================
+   6. RESPONSIVE BREAKPOINTS
+   ============================================================ */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 64px;
+  }
+  
+  .section {
+    padding: var(--space-16) 0;
+  }
+
+  .container {
+    padding: 0 var(--space-4);
+  }
+}
