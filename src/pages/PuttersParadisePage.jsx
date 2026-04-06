@@ -33,7 +33,7 @@ export default function PuttersParadisePage() {
         title="Putter's Paradise"
         subtitle="Das ultimative Adventure-Golf-Erlebnis. 13 kreative Bahnen für Familienspaß und Gruppen-Herausforderungen."
         label="ADVENTURE GOLF"
-        backgroundImage="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1600&q=80"
+        backgroundImage="/images/putters_hero_placeholder.webp"
         videoSrc="/videos/putters_hero_placeholder.mp4"
       >
         <a href="#pricing" className="btn btn--primary btn--large">

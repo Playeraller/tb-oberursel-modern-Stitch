@@ -7,21 +7,21 @@ const ACTIVITIES = [
   {
     title: 'Tennis',
     description: '6 Hallenplätze und 2 Außenplätze – für jedes Level die richtige Spielfläche.',
-    image: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800&q=80',
+    image: '/images/tennis_court.webp',
     to: '/tennis',
     label: '8 Plätze',
   },
   {
     title: 'Badminton',
     description: '4 professionelle Felder mit über 10m Deckenhöhe für maximale Spielfreiheit.',
-    image: 'https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=800&q=80',
+    image: '/images/badminton_court.webp',
     to: '/badminton',
     label: '4 Felder',
   },
   {
     title: "Putter's Paradise",
     description: '13 kreative Bahnen für Familienspaß und Gruppen-Herausforderungen.',
-    image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80',
+    image: '/images/putters_paradise.webp',
     to: '/putters-paradise',
     label: '13 Bahnen',
   },
@@ -34,7 +34,7 @@ export default function HomePage() {
       <Hero
         title="Willkommen beim TBO"
         subtitle="Ihr moderner Treffpunkt für Sport, Spaß und Gemeinschaft in Oberursel."
-        backgroundImage="https://images.unsplash.com/photo-1551773188-d63e5e5d0f65?w=1600&q=80"
+        backgroundImage="/images/home_hero_placeholder.webp"
         label="TENNIS BADMINTON OBERURSEL"
       >
         <Link to="/tennis" className="btn btn--primary btn--large">

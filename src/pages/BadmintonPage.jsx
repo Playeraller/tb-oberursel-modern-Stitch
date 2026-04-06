@@ -39,7 +39,7 @@ export default function BadmintonPage() {
         title="Badminton beim TBO"
         subtitle="Schnelligkeit, Präzision und volle Power – auf 4 professionellen Feldern mit über 10 Meter Deckenhöhe."
         label="HIGH PERFORMANCE"
-        backgroundImage="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=1600&q=80"
+        backgroundImage="/images/badminton_hero_placeholder.webp"
         videoSrc="/videos/badminton_hero_placeholder.mp4"
         align="left"
       >
