@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -14,7 +14,7 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
-    setMenuOpen(false);
+    setIsMenuOpen(false);
     window.scrollTo(0, 0);
   }, [location]);
 
@@ -27,30 +27,31 @@ export default function Header() {
   return (
     <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
       <div className="header__inner container">
-        <Link to="/" className="header__logo" id="header-logo">
+        <Link to="/" className="header__logo" id="header-logo" onClick={() => setIsMenuOpen(false)}>
           <span className="header__logo-mark">TBO</span>
           <span className="header__logo-text">Tennis Badminton Oberursel</span>
         </Link>
 
-        <nav className={`header__nav ${menuOpen ? 'header__nav--open' : ''}`} id="main-nav">
+        <nav className={`header__nav ${isMenuOpen ? 'header__nav--open' : ''}`} id="main-nav">
           {navLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
               className={`header__link ${location.pathname === link.to ? 'header__link--active' : ''}`}
               id={`nav-${link.to.replace('/', '')}`}
+              onClick={() => setIsMenuOpen(false)}
             >
               {link.label}
             </Link>
           ))}
-          <Link to="/tennis-booking" className="btn btn--primary header__cta" id="nav-booking-cta">
+          <Link to="/tennis-booking" className="btn btn--primary header__cta" id="nav-booking-cta" onClick={() => setIsMenuOpen(false)}>
             Platz buchen
           </Link>
         </nav>
 
         <button
-          className={`header__burger ${menuOpen ? 'header__burger--open' : ''}`}
-          onClick={() => setMenuOpen(!menuOpen)}
+          className={`header__burger ${isMenuOpen ? 'header__burger--open' : ''}`}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Menü öffnen"
           id="burger-menu"
         >
