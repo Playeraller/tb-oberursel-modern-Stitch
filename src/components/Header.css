@@ -40,12 +40,11 @@
   font-family: var(--font-display);
   font-size: 1.75rem;
   font-weight: 800;
-  color: var(--primary);
+  color: var(--on-primary);
   letter-spacing: -0.03em;
 }
 
-.header--scrolled .header__logo-mark,
-.header__logo-mark {
+.header--scrolled .header__logo-mark {
   color: var(--primary);
 }
 
@@ -123,10 +122,20 @@
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--on-surface);
+  background: var(--on-primary);
   border-radius: 2px;
   transition: all var(--transition-base);
   transform-origin: center;
+}
+
+.header--scrolled .header__burger span {
+  background: var(--on-surface);
+}
+
+.header__nav--open .header__burger span,
+.header__nav--open .header__logo-mark {
+  background: var(--on-surface);
+  color: var(--primary);
 }
 
 .header__burger--open span:nth-child(1) {
@@ -154,9 +163,7 @@
     right: 0;
     bottom: 0;
     z-index: 999;
-    background: color-mix(in srgb, var(--surface) 95%, transparent);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    background: var(--surface);
     display: flex;
     flex-direction: column;
     justify-content: center;
