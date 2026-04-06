@@ -21,6 +21,11 @@ jspm_packages/
 *.sublime-workspace
 .vscode/*
 !.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # Tooling
 dist
