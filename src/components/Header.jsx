@@ -28,8 +28,7 @@ export default function Header() {
     <header className={`header ${scrolled ? 'header--scrolled' : ''} ${isMenuOpen ? 'header--open' : ''}`}>
       <div className="header__inner container">
         <Link to="/" className="header__logo" id="header-logo" onClick={() => setIsMenuOpen(false)}>
-          <span className="header__logo-mark">TBO</span>
-          <span className="header__logo-text">Tennis Badminton Oberursel</span>
+          <img src="/logo.png" alt="TBO Logo" className="header__logo-img" />
         </Link>
 
         <nav className={`header__nav ${isMenuOpen ? 'header__nav--open' : ''}`} id="main-nav">

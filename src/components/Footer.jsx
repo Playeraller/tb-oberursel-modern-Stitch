@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer__brand">
             <Link to="/" className="footer__logo">
-              <span className="footer__logo-mark">TBO</span>
+              <img src="/logo.png" alt="TBO Logo" className="footer__logo-img" />
             </Link>
             <p className="footer__desc">
               Tennis Badminton Oberursel – Ihre Anlage für Sport und Spaß in Oberursel.
